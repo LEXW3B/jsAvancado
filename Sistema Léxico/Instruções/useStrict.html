@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use strict</title>
+</head>
+<body>
+    
+
+    <script>
+        'use strict' //variaveis não declaradas não seram executadas no js com o uso do 'use strict'
+        let x = 10//escopo global
+
+        function foo() {
+            x=20//escopo local
+        }
+        foo()
+        console.log(x)
+
+        function dobrar (n1, n2) {
+            return n1*n2
+        }
+        console.log(dobrar(5, 5))
+
+        function Teste() {
+            console.log(this)
+            this.a ='a'
+        }
+        Teste()
+    </script>
+</body>
+</html>
