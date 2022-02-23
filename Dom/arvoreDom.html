@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="title1">Curso de javascript</h1>
+
+    <main id="idmain" class="cmain">
+        <h2>Subtitulo</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </main>
+
+    <section class="csection" id="idsection">
+        <h3>Subtitulo</h3>
+        <p class="paragrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <p class="paragrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+
+    <script>
+        window.document.getElementById('title1')
+        window.document.getElementById('title1').textContent = 'NEW TEXT'
+        
+        window.document.getElementsByClassName('paragrafos2')
+        window.document.getElementsByClassName('paragrafos2')[0].innerHTML = 'sei lá...'
+        window.document.getElementsByClassName('paragrafos2')[1].style.color = 'red'
+
+        let teste = document.getElementsByClassName('cmain')
+        teste[0].style.background = 'green'
+    </script>
+    
+</body>
+</html>
