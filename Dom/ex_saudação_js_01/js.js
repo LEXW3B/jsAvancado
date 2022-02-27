@@ -1,8 +1,12 @@
 (function(){
     let nomeUsuario = 'Alexandre'
+    let top = document.querySelector('.top-bar p')
     function trocarNome () {
-        let top = document.querySelector('.top-bar p')
-        top.innerHTML = `Bem-vindo(a), ${nomeUsuario}`
+        if (nomeUsuario) {
+            top.innerHTML = `Bem-vindo(a), ${nomeUsuario}`
+        } else {
+            top.parentElement.style.display = 'none'
+        }   
     }
     trocarNome()
 })()
