@@ -1,4 +1,4 @@
-//
+//esse metodo transforma a array
 
 const arr = [1,5,10,'ola',true]
 
