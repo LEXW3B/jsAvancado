@@ -139,17 +139,30 @@
       <script src="js/calc.js"></script>
       <script>
 
-        const INDICES_NOTAS = {
-          n1: 1,
-          n2: 2,
-          n3: 3,
-          n4: 4,
-          media: 5
-
-        }
-
+        
         ( function(){
 
+          function pegaIndice(indice){
+            const trHeader = document.querySelector('thead tr')
+            const thsHeader = trHeader.document.querySelectorAll('th')
+
+            const th = trHeader.querySelector(`[aluno-nota='${indice}']`)
+            console.log(th)
+
+            //thsHeader.indexOf(th)nao e um codigo valido
+            //const i = Array.prototype.indexOf.call(thsHeader, th) esta certa mais e muito antigo essa sintax
+            //const i = Array.from(thsHeader).indexOf(th) essa e outra forma mais recente
+            const i = [...thsHeader].indexOf(th) //mais recente e menor
+            return i
+          }
+          const INDICES_NOTAS = {
+            n1: pegaIndice('n1'),
+            n2: pegaIndice('n2'),
+            n3: pegaIndice('n3'),
+            n4: pegaIndice('n4'),
+            media: pegaIndice('media')  
+          }
+          
           const trs = document.querySelectorAll('tbody tr')
 
           let x = 0
